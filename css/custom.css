@@ -1,0 +1,298 @@
+/*全局背景透明渐变
+#recent-posts>.recent-post-item,.layout_page>div:first-child:not(.recent-posts),.layout_post>#page,.layout_post>#post,.read-mode .layout_post>#post {
+    background: var(--light_bg_color)
+}
+
+#aside-content .card-widget {
+    background: var(--light_bg_color)
+}
+
+#web_bg {
+    background: linear-gradient(90deg,rgba(247,149,51,.1),rgba(243,112,85,.1) 15%,rgba(239,78,123,.1) 30%,rgba(161,102,171,.1) 44%,rgba(80,115,184,.1) 58%,rgba(16,152,173,.1) 72%,rgba(7,179,155,.1) 86%,rgba(109,186,130,.1))
+}
+
+#footer {
+    background: rgba(255,255,255,.15);
+    color: #000;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    backdrop-filter: saturate(100%) blur(5px)
+}
+*/
+
+/*页脚透明渐变
+#footer::before {
+    background: rgba(255,255,255,.15)
+}
+
+#footer #footer-wrap {
+    color: var(--font-color)
+}
+
+#footer #footer-wrap a {
+    color: var(--font-color)
+}
+*/
+
+
+/*
+1.每一个不同地方的css会空两行
+2.参考: https://www.antmoe.com/posts/a811d614/
+  https://butterfly.lete114.top/article/Butterfly-config.html
+
+*/
+
+/* 版权链接去掉下划线 */
+.layout_post .post-copyright .post-copyright-info a {
+    text-decoration: none;
+}
+
+
+/* 博主昵称颜色 --也就是首页侧边栏头像下面那个昵称*/
+.author-info__name {
+    color: #BA55D3;
+}
+
+
+/* 页脚透明 */
+#footer {
+    background: transparent !important;
+}
+
+/* 页脚字体颜色 */
+#footer #footer-wrap {
+    color: black;
+}
+
+/*取消首页大图上面的黑色遮罩*/
+#page-header:not(.not-top-img):before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  content: '';
+}
+
+/*文章页上面添加黑色遮罩*/
+/*
+#page-header.post-bg:before {
+  background-color: rgba(0,0,0,0.5);
+  background-image: https://jack-img.oss-cn-hangzhou.aliyuncs.com/image/202304261947038.webp;
+}
+*/
+/*文章顶部图统一*/
+#page-header {
+	background-image: https://jack-img.oss-cn-hangzhou.aliyuncs.com/image/202304261947038.webp;
+}
+
+/*---------修改字体部分-------------*/
+/*文章内容字体大小*/
+#article-container p {
+  margin: 0 0 16px;
+  font-size: 16px;
+}
+/*强制修改全局字体*/
+body {
+    font-family: Noto Serif SC !important;
+}
+/*修改左上角字体*/
+#nav #site-name {
+    font-family:sans-serif;
+}
+/*修改首页大标题字体*/
+#page-header site-title {
+    font-family:sans-serif;
+}
+
+
+/*添加变色效果*/
+.page-title {
+    letter-spacing: -1px;
+    font-weight: 700;
+    color: #fff;
+    -webkit-animation-delay: .6s;
+    animation-delay: .5s;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, .3)
+}
+
+.page-title {
+    animation: fade-in-down 1s both;
+    -webkit-animation: fade-in-down 1s both;
+    mix-blend-mode: screen;
+    font-size: 5rem;
+    font-family:sans-serif;
+}
+
+.page-title span:hover {
+    animation: pageTitleText 2s infinite;
+    -webkit-animation: pageTitleText 1s infinite;
+}
+
+@keyframes pageTitleText {
+    0% {text-shadow: 2px 0 0 tomato;}
+    10%{text-shadow: -2px -2px 0 gold;}
+    20% {text-shadow: 2px 0 0 lime;}
+    30% {text-shadow: 2px 0 0 turquoise;}
+    40% {text-shadow: 2px 2px 0 tomato;}
+    50%{text-shadow:  0 -2px 0 gold;}
+    60% {text-shadow: 0 2px 0 lime;}
+    70% {text-shadow: 2px 0 0 turquoise;}
+    80% {text-shadow: 2px -4px 0 tomato;}
+    90%{text-shadow: 2px 2px 0 gold;}
+    100% {text-shadow: 2px 0 0 lime;}
+}
+
+/*修改作者信息，名字字体*/
+.author-info__name {
+    color: #b65cb8;
+    font-family:sans-serif;
+}
+/*---------修改字体部分-------------*/
+
+/*check-box位置和发光*/
+.checkbox {
+  display: inline-block !important;
+  width:382px;
+  font-size:0;
+  align-items:center;
+}  
+
+.checkbox input {
+	box-shadow:0 0 5px 1px	#87CEFA;
+}
+
+/*诗词字体大小*/
+.poem p {
+  font-family: 'Poem', 'KaiTi', sans-serif !important;
+  font-size: 25px !important;
+  text-align: center;
+}
+/*诗词作者字体大小*/
+.poem-author {
+  font-size: 20px !important;
+}
+
+/*头像白色边框*/
+.avatar-img {
+  border: 4px solid #ffffff;
+}
+/*头像背景卡片渐变*/
+#aside-content .card-widget.card-info{
+  background-image: linear-gradient(to top, #FFFFFF, transparent), url(https://jack-img.oss-cn-hangzhou.aliyuncs.com/image/202211161555274.jpg);
+}
+
+/* 首页中间打字效果上方 */
+#page-header #site_title {
+    color: #80bdab;
+}
+
+
+/* 顶部导航栏 */
+#nav a {
+    color: #f9f2f4;
+}
+
+
+/*页脚自定义字段字体颜色,也就是配置文件里的footer_custom_text*/
+.footer_custom_text {
+    color: 	#000000;
+}
+
+
+/*鼠标样式*/
+body {
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/default.cur),
+        default;
+}
+a,
+img {
+    cursor: url(https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/img/pointer.cur),
+        default;
+}
+
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(73, 177, 245, 0.2);
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #49b1f5;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    rgba(255, 255, 255, 0.4) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.4) 75%,
+    transparent 75%,
+    transparent
+  );
+  border-radius: 2em;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: #49b1f5;
+}
+
+
+/* a标签默认颜色 */
+#article-container a {
+    color: #00c4b6;
+    text-decoration: none;
+}
+
+
+/* 鼠标悬停时的颜色 */
+#article-container a:hover {
+    color: #e58a8a;
+}
+
+
+/*a标签颜色*/
+a {
+    color: #00c4b6;
+}
+
+
+/*文章顶部图透明
+#page-header {
+     background: transparent !important;
+}
+#page-header.post-bg:before {
+     position: absolute;
+     top: 0;
+     left: 0;
+     display: block;
+     width: 100%;
+     height: 100%;
+     background: transparent !important; /*这个rgba可以自己改*/
+     content: '';
+}
+*/
+
+
+
+/*--------------------下面是暂时用不到的css样式--------------------*/
+
+
+/* 自定义字体，暂时用不到先注释掉*/
+/* @font-face {
+    font-family: 'mycustom_font';
+    src: url('https://cdn.jsdelivr.net/gh/youthlql/static/font/chun_feng_kai.ttf');
+	font-size: 16px;
+} */
+
+
+
